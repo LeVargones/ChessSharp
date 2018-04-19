@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Felipe Vargas\\CSharp\\CSharp.csproj",
+      "projectUniqueName": "C:\\Users\\Felipe Vargas\\CSharp\\ChessSharp\\CSharp.csproj",
       "projectName": "CSharp",
-      "projectPath": "C:\\Users\\Felipe Vargas\\CSharp\\CSharp.csproj",
+      "projectPath": "C:\\Users\\Felipe Vargas\\CSharp\\ChessSharp\\CSharp.csproj",
       "packagesPath": "C:\\Users\\Felipe Vargas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Felipe Vargas\\CSharp\\obj\\",
+      "outputPath": "C:\\Users\\Felipe Vargas\\CSharp\\ChessSharp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

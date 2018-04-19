@@ -1,12 +1,15 @@
 using System;
+using Game;
 
-namespace Board
+namespace Pieces.Pieces
 {
     public class Piece
     {
       private char _Tipo;
       private bool _Cor;
 
+      public virtual bool checkMove (Casa StateAtual, Char[] moveSplited) {return true;}
+      
       public virtual string Move()
       {
         return "ad";

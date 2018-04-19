@@ -8,3 +8,13 @@ C:\Users\Felipe Vargas\CSharp\obj\Debug\netcoreapp2.0\CSharp.AssemblyInfoInputs.
 C:\Users\Felipe Vargas\CSharp\obj\Debug\netcoreapp2.0\CSharp.AssemblyInfo.cs
 C:\Users\Felipe Vargas\CSharp\obj\Debug\netcoreapp2.0\CSharp.dll
 C:\Users\Felipe Vargas\CSharp\obj\Debug\netcoreapp2.0\CSharp.pdb
+C:\Users\Felipe Vargas\CSharp\ChessSharp\bin\Debug\netcoreapp2.0\CSharp.deps.json
+C:\Users\Felipe Vargas\CSharp\ChessSharp\bin\Debug\netcoreapp2.0\CSharp.runtimeconfig.json
+C:\Users\Felipe Vargas\CSharp\ChessSharp\bin\Debug\netcoreapp2.0\CSharp.runtimeconfig.dev.json
+C:\Users\Felipe Vargas\CSharp\ChessSharp\bin\Debug\netcoreapp2.0\CSharp.dll
+C:\Users\Felipe Vargas\CSharp\ChessSharp\bin\Debug\netcoreapp2.0\CSharp.pdb
+C:\Users\Felipe Vargas\CSharp\ChessSharp\obj\Debug\netcoreapp2.0\CSharp.csproj.CoreCompileInputs.cache
+C:\Users\Felipe Vargas\CSharp\ChessSharp\obj\Debug\netcoreapp2.0\CSharp.AssemblyInfoInputs.cache
+C:\Users\Felipe Vargas\CSharp\ChessSharp\obj\Debug\netcoreapp2.0\CSharp.AssemblyInfo.cs
+C:\Users\Felipe Vargas\CSharp\ChessSharp\obj\Debug\netcoreapp2.0\CSharp.dll
+C:\Users\Felipe Vargas\CSharp\ChessSharp\obj\Debug\netcoreapp2.0\CSharp.pdb

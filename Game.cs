@@ -1,52 +1,23 @@
 using System;
 using System.Collections.Generic;
-using Pieces;
-using Board;
 
 namespace Game
 {
     public class GameStart
     {
-      public void Start(List<Casa> board) {
-          GameStart GameStart = new GameStart();
+      static void Main(string[] args) 
+      {
+        bool CorAtual = true;
+        while (true)
+        {
+          Board.PrintBoard();
           Console.WriteLine("Insira um movimento"); 
-          string movimento = Console.ReadLine().ToLower();
+          string movimento = Console.ReadLine().ToUpper();
           // Fazer o tratamento da string do movimento, atualizar o tabuleiro para re-impressão
           Char[] moveSplited = movimento.ToCharArray();
-          GameStart.interpMove(board, moveSplited);
+          if (Board.ProcuraPeca(moveSplited, CorAtual))
+            CorAtual = !CorAtual;
         }
-
-      public void interpMove (List<Casa> board, Char[] moveSplited) {
-        GameStart GameStart = new GameStart();
-        switch (moveSplited[0])
-        {
-          // Torre
-            case 'r':
-              Console.WriteLine("Torre");
-            break;
-          // Cavalo
-            case 'n':
-              Knight.checkMove(moveSplited);
-              Console.WriteLine("Cavalo");
-            break;
-          // Bispo
-            case 'b':
-              Console.WriteLine("Bispo");
-            break;
-          // Rei
-            case 'k':
-              Console.WriteLine("Rei");
-            break;
-          // Dama
-            case 'q':
-              Console.WriteLine("Dama");
-            break;
-          // Peão
-            default:
-              Console.WriteLine("Peão");
-            break;
-        }
-        GameStart.Start(board);
       }
     }
 }

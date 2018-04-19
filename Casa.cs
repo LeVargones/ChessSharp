@@ -1,6 +1,7 @@
 using System;
+using Pieces.Pieces;
 
-namespace Board
+namespace Game
 {
     public class Casa
     {
@@ -8,25 +9,35 @@ namespace Board
       public char PosLetra;
       public int PosNum;
       public char Convert (int j) {
+        string returnValue;
         switch (j)
         {
             case 0:
-              return 'a';
+              returnValue = "a";
+            break;
             case 1:
-              return 'b';
+              returnValue = "b";
+            break;
             case 2:
-              return 'c';
+              returnValue = "c";
+            break;
             case 3:
-              return 'd';
+              returnValue = "d";
+            break;
             case 4:
-              return 'e';
+              returnValue = "e";
+            break;
             case 5:
-              return 'f';
+              returnValue = "f";
+            break;
             case 6:
-              return 'g';
+              returnValue = "g";
+            break;
             default:
-              return 'h';
+              returnValue = "h";
+            break;
         }
+        return (char) returnValue.ToUpper()[0];
       }
     }
 
