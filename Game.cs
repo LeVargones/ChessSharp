@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Utils;
 
 namespace Game
 {
@@ -10,7 +11,7 @@ namespace Game
         bool CorAtual = true;
         while (true)
         {
-          Board.PrintBoard();
+          Utilidades.PrintBoard();
           Console.WriteLine("Insira um movimento"); 
           string movimento = Console.ReadLine().ToUpper();
           // Fazer o tratamento da string do movimento, atualizar o tabuleiro para re-impressão
