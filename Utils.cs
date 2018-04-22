@@ -17,45 +17,56 @@ namespace Utils
 					}
 				}
 		}
-		public static bool IsPawn(char[] splitedMove, Casa casa, bool Cor)
+		public static int IsPawn(char[] splitedMove, Casa casa, bool Cor)
 		{
-			return (Array.IndexOf(Board.AateH, splitedMove[0]) > -1 
-								&& casa.Peca?.Cor == Cor 
-								&& casa.Peca?.Tipo == 'P' 
-								&& casa.PosLetra == splitedMove[0]) ? true : false;
-		}		
-    public static bool MovePeca(bool Captura)
-		{
-			if (Board.StateAtual.Peca.checkMove(Board.StateAtual, Board.MovimentoAtual)) 
+			if (Array.IndexOf(Board.AateH, splitedMove[0]) > -1)
 			{
-				int ChecaColisao = Utilidades.ChecaColisao();
-				if (ChecaColisao == 1)
-				{
-					Console.WriteLine("Movimento Inválido, por favor insira outro!");
-					return false;
-				} 
-				else if (ChecaColisao == 0)
-				{
-					if (Captura)
-						Console.WriteLine("Não tem nenhuma peça a ser tomada, não utilize o X!");
-					else
-						Movimenta();
-					return !Captura;
-				} 
-				else
-				{
-					if (!Captura)
-						Console.WriteLine("Para tomar uma peça, utilize o X no movimento!");
-					else
-						Movimenta();
-					return Captura;
-				}
+				return (casa.Peca?.Cor == Cor 
+								&& casa.Peca?.Tipo == 'P' 
+								&& casa.PosLetra == splitedMove[0]) ? 1 : -1;
 			}
 			else 
+				return 0;
+		}		
+    public static int MovePeca(bool Captura)
+		{
+			if (Board.StateAtual.Peca == null)
+				return 0;
+			int ChecaColisao = Utilidades.ChecaColisao();
+			// Se tem peça da mesma cor
+			if (ChecaColisao == 1)
+				return -1;
+			// Se não tem peça
+			else if (ChecaColisao == 0)
 			{
-				Console.WriteLine("Movimento Inválido, por favor insira outro!");
-				return false;
+				if (Captura)
+				// Se for pra capturar e não tem peça da erro
+					return -1;
+				else
+				// Senão tenta mover a peça
+				{
+					if (Board.StateAtual.Peca.checkMove(Board.StateAtual, Board.MovimentoAtual)) 
+					{
+						Movimenta();
+						return 1;
+					}
+				}
+			} 
+			else
+			// Se tem peça da outra cor
+			{	
+				if (!Captura)
+					return -1;
+				else
+				{
+					if (Board.StateAtual.Peca.checkMove(Board.StateAtual, Board.MovimentoAtual)) 
+					{
+						Movimenta();
+						return 1;
+					}
+				}
 			}
+			return 0;
 		}
     public static int ChecaColisao() 
 		{
